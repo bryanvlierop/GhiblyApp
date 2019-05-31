@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gZw-BI-Y6V">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Bcg-f5-88t">
+            <objects>
+                <tabBarController id="gZw-BI-Y6V" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="01u-hH-Ozl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7jC-Pv-DbY" kind="relationship" relationship="viewControllers" id="Ngh-je-W44"/>
+                        <segue destination="aRC-0h-nu6" kind="relationship" relationship="viewControllers" id="wUb-hX-KN0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ycz-DZ-1fD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1949" y="-753"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="var-Hg-1ET">
+            <objects>
+                <viewController id="aRC-0h-nu6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qcS-8e-ZJc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b8V-Qg-noK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="rfm-gf-Vts"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMb-V0-7Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1162" y="-319"/>
+        </scene>
+        <!--Ghibli List-->
+        <scene sceneID="cjk-ic-mKE">
+            <objects>
+                <tableViewController title="Ghibli List" id="7jC-Pv-DbY" customClass="GhibliTableViewController" customModule="Ghibli" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hI6-ql-iQF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GhibliCell" rowHeight="100" id="rQp-AJ-nou" customClass="GhibliCell" customModule="Ghibli" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rQp-AJ-nou" id="7iR-Vc-lYa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJC-sd-D0G">
+                                            <rect key="frame" x="36" y="11" width="342" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="iVJ-Sy-grk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKY-yk-yTu">
+                                            <rect key="frame" x="36" y="37" width="342" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="ksp-0h-WCe"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RT-Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A07-Yq-6y2">
+                                            <rect key="frame" x="36" y="63" width="342" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="sCv-bn-tjC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cKY-yk-yTu" firstAttribute="top" secondItem="JJC-sd-D0G" secondAttribute="bottom" constant="5" id="8ve-9r-95B"/>
+                                        <constraint firstItem="A07-Yq-6y2" firstAttribute="leading" secondItem="7iR-Vc-lYa" secondAttribute="leadingMargin" constant="16" id="Bxr-Ai-Lbv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JJC-sd-D0G" secondAttribute="trailing" constant="16" id="IUU-fL-9Cy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="A07-Yq-6y2" secondAttribute="trailing" constant="16" id="UQK-vn-V1J"/>
+                                        <constraint firstItem="JJC-sd-D0G" firstAttribute="leading" secondItem="7iR-Vc-lYa" secondAttribute="leadingMargin" constant="16" id="Y0O-Pf-lre"/>
+                                        <constraint firstItem="cKY-yk-yTu" firstAttribute="leading" secondItem="7iR-Vc-lYa" secondAttribute="leadingMargin" constant="16" id="daU-sB-UG8"/>
+                                        <constraint firstItem="JJC-sd-D0G" firstAttribute="top" secondItem="7iR-Vc-lYa" secondAttribute="topMargin" id="e35-4I-Pl6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cKY-yk-yTu" secondAttribute="trailing" constant="16" id="q1q-QL-h5u"/>
+                                        <constraint firstItem="A07-Yq-6y2" firstAttribute="top" secondItem="cKY-yk-yTu" secondAttribute="bottom" constant="5" id="qUl-Ah-VeU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ghibliDescriptionLabel" destination="cKY-yk-yTu" id="bMb-XC-x5T"/>
+                                    <outlet property="ghibliScoreLabel" destination="A07-Yq-6y2" id="5qt-1E-ukI"/>
+                                    <outlet property="ghibliTitleLabel" destination="JJC-sd-D0G" id="Csh-4A-YSB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7jC-Pv-DbY" id="mOD-dE-dkY"/>
+                            <outlet property="delegate" destination="7jC-Pv-DbY" id="7uG-Jg-O1x"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="list" id="8z1-t6-Vff"/>
+                    <navigationItem key="navigationItem" title="Ghibli List" id="PCM-99-BvW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RE9-uX-fIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1170" y="-966"/>
+        </scene>
+    </scenes>
+</document>
